@@ -1,6 +1,6 @@
 {% set name = "geomeTRIC" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "79c2fd9081b46cfe174b6ccd47f1296759d6553617706f130975ff6efda49901" %}
+{% set version = "0.9.1" %}
+{% set sha256 = "b7cc68e9ac253ee299455671a4deda1650c401c2bd738f1881e2405a89999130" %}
 
 package:
   name: {{ name|lower }}
