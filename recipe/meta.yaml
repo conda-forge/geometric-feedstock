@@ -1,6 +1,6 @@
 {% set name = "geomeTRIC" %}
-{% set version = "0.9.3" %}
-{% set sha256 = "0ce377b6f20234980d8eaf6daa4452ff22a40a10e1e4ca30860bd14fc025ce01" %}
+{% set version = "0.9.4" %}
+{% set sha256 = "efaed64b13b514ff7063f86ead967be086f8ffa25f95538aecefc787013b261f" %}
 
 package:
   name: {{ name|lower }}
@@ -36,7 +36,7 @@ test:
   requires:
     - pytest
   commands:
-    - py.test --pyargs geometric
+    - py.test --pyargs geometric -vk json
 
 about:
   home: http://github.com/leeping/geomeTRIC/
