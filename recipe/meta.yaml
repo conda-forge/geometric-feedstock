@@ -1,6 +1,6 @@
 {% set name = "geomeTRIC" %}
-{% set version = "0.9.7.2" %}
-{% set sha256 = "d4cc89839a29e7c1a4b6ff390df34273ea2ad1ceae1d67e4b7dde11102ff9615" %}
+{% set version = "1.0" %}
+{% set sha256 = "ac4c6168690b850d5040f604a8ad2f6beada7d8b0fb150ad62a753104e38dc02" %}
 
 package:
   name: {{ name|lower }}
@@ -20,12 +20,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - setuptools
     - pip
   run:
-    - {{ pin_compatible('numpy', lower_bound='1.11') }}
-    - python
+    - python >=3.7
+    - setuptools
+    - {{ pin_compatible('numpy', lower_bound='1.18') }}
     - networkx
     - six
 
@@ -35,6 +36,10 @@ test:
     - geometric
   requires:
     - pytest
+    - rdkit
+    - openmm
+    - ase
+    - xtb-python
   commands:
     - py.test --pyargs geometric -vk json
 
