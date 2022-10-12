@@ -36,6 +36,10 @@ test:
     - geometric
   requires:
     - pytest
+    - rdkit
+    - openmm
+    - ase
+    - xtb-python
   commands:
     - py.test --pyargs geometric -vk json
 
