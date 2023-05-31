@@ -1,11 +1,11 @@
-About geometric
-===============
+About geometric-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/geometric-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/leeping/geomeTRIC/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/geometric-feedstock/blob/main/LICENSE.txt)
 
 Summary: Molecular geometry optimizer in the TRIC coordinate system.
 
