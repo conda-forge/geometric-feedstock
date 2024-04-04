@@ -28,7 +28,7 @@ requirements:
   run:
     - python >=3.7
     - setuptools
-    - {{ pin_compatible('numpy', lower_bound='1.18') }}
+    - numpy
     - networkx
     - six
 
