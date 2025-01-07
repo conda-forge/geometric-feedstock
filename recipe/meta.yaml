@@ -1,30 +1,28 @@
 {% set name = "geomeTRIC" %}
 {% set version = "1.0.2" %}
-{% set sha256 = "7a6452769d83ff5a6461f06c2dabd2b63d9bd756b1c820dbe48f9aa623af287d" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/leeping/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 7a6452769d83ff5a6461f06c2dabd2b63d9bd756b1c820dbe48f9aa623af287d
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - geometric-optimize = geometric.optimize:main
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - setuptools
     - numpy
     - networkx
@@ -39,6 +37,7 @@ test:
     - openmm
     - ase
     - xtb-python
+    - python {{ python_min }}
   commands:
     - $PYTHON -m pytest --pyargs geometric -v -k json
 
