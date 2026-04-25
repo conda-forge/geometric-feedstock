@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/leeping/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 36ac88ce94528c09a7f36f2aa88457299d46600090cff1178a54c843b8c02fb9
+  sha256: 9a1d9172ae309cebb8720de806de31770f8e1e74e25c64b15a6022cc9cd6579d
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - geometric-optimize = geometric.optimize:main
@@ -55,3 +55,6 @@ extra:
     - leeping
     - dgasmith
     - yudongqiu
+    - j-wags
+    - bennybp
+    - loriab
