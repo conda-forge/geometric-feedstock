@@ -1,5 +1,5 @@
 {% set name = "geomeTRIC" %}
-{% set version = "1.1" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/leeping/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 36ac88ce94528c09a7f36f2aa88457299d46600090cff1178a54c843b8c02fb9
+  sha256: 3c9c48b39dbd66f6ee71edb63ae8f6bc53b57a3c487ad78bfcd06ab210052612
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - geometric-optimize = geometric.optimize:main
